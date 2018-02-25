@@ -1,5 +1,6 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
+#include <stdarg.h>
 /**
  * struct print_flags - Struct
  *
@@ -9,9 +10,14 @@
 struct print_flags
 {
 char *c;
-void (*f)(char s);
+char *(*f)(va_list list);
 };
-typdef struct print_flags flags;
+typedef struct print_flags flags;
 int _printf(const char *format, ...);
 int _strlen(char *s);
+char *_strcat(char *dest, char *src);
+char *print_c(va_list list);
+char *print_s(va_list list);
+char *print_i(va_list list);
+char *print_d(va_list list);
 #endif
