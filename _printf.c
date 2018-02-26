@@ -27,9 +27,16 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
+	if (format == NULL)
+		return (0);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] == '%')
+		{
+			create_buff[b_len] = '%';
+			b_len++;
+		}
+		else if (format[i] == '%')
 		{
 			for (j = 0; flags_t[j].f != NULL; j++)
 			{
@@ -51,5 +58,5 @@ int _printf(const char *format, ...)
 	}
 	write(1, create_buff, b_len);
 	va_end(list);
-	return(0);
+	return(b_len);
 }
