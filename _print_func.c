@@ -11,7 +11,7 @@ char *print_c(va_list list)
 
 	s[0] = va_arg(list, int);
 	if (s[0] == '\0')
-		return (NULL);
+		return (" ");
 	return (s);
 }
 
