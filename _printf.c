@@ -38,15 +38,17 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%')
 		{
+			if (format[i + 1] == ' ')
+				i = i + (return_position(format, i));
 			for (j = 0; flags_t[j].f != NULL; j++)
 			{
 				if (format[i + 1] == *(flags_t[j].c))
 				{
-				    s = flags_t[j].f(list);
-				    _strlen(s);
-				    _strcat(create_buff , s, b_len);
-				    b_len += _strlen(s);
-				    i++;
+					s = flags_t[j].f(list);
+					_strlen(s);
+					_strcat(create_buff , s, b_len);
+					b_len += _strlen(s);
+					i++;
 				}
 			}
 		}

@@ -20,4 +20,5 @@ char *print_c(va_list list);
 char *print_s(va_list list);
 char *print_i(va_list list);
 char *print_d(va_list list);
+int return_position(const char *s, int n);
 #endif
