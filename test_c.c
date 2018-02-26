@@ -8,6 +8,8 @@
  */
 int main(void)
 {
+	char c = '!';
+	char *s = "Morning";
 
     _printf("Let's try to printf a simple sentence.\n");
     printf("Let's try to printf a simple sentence.\n");
@@ -19,5 +21,9 @@ int main(void)
     printf("String:[%     s]\n", "I am a string !");
     _printf("Percent:[%%]\n");
     printf("Percent:[%%]\n");
+    _printf("Good %s %c%c\n", s , c, c);
+    printf("Good %s %c%c\n", s , c, c);
+     _printf("Unknown:[%r]\n");
+    printf("Unknown:[%r]\n");
     return (0);
 }

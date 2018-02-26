@@ -31,11 +31,8 @@ int _printf(const char *format, ...)
 		return (0);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == '%' && format[i + 1] == '%')
-		{
-			create_buff[b_len] = '%';
-			b_len++;
-		}
+		if (format[i] == '%' && format [i + 1] == '%')
+			continue;
 		else if (format[i] == '%')
 		{
 			if (format[i + 1] == ' ')
@@ -46,10 +43,16 @@ int _printf(const char *format, ...)
 				{
 					s = flags_t[j].f(list);
 					_strlen(s);
-					_strcat(create_buff , s, b_len);
+					_strcat(create_buff, s, b_len);
 					b_len += _strlen(s);
 					i++;
+					break;
 				}
+			}
+			if (flags_t[j].f == NULL)
+			{
+				create_buff[b_len] = format[i];
+				b_len++;
 			}
 		}
 		else
@@ -60,5 +63,5 @@ int _printf(const char *format, ...)
 	}
 	write(1, create_buff, b_len);
 	va_end(list);
-	return(b_len);
+	return (b_len);
 }
