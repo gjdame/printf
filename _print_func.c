@@ -21,7 +21,7 @@ char *print_s(va_list list)
 
 	s = va_arg(list, char *);
 	if (s == NULL)
-		return (NULL);
+		return (s = "(null)");
 	return (s);
 }
 
