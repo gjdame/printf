@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%')
 		{
 			if (format[i + 1] == ' ')
-				i = i + (return_position(format, i));
+				i += return_position(format, i);
 			for (j = 0; flags_t[j].f != NULL; j++)
 			{
 				if (format[i + 1] == *(flags_t[j].c))

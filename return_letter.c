@@ -8,16 +8,14 @@
 int return_position(const char *s, int n)
 {
 	int i;
-	int holder;
 	
-	holder = n;
 	i = 0;
-	n++;
+
 	while (*s)
 	{
-		if (s[n] != ' ')
+		if (s[n + 1] != ' ')
 		{
-			return (holder - i);
+			return(i);
 		}
 		n++;
 		i++;
