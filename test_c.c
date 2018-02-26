@@ -8,11 +8,16 @@
  */
 int main(void)
 {
-	char s;
-	s = 'W';
-	char *c;
-	c = "World";
-		_printf("Hello %c %s\n", s, c);
-	printf("Hello %c %s\n", s, c);
-     return (0);
+
+    _printf("Let's try to printf a simple sentence.\n");
+    printf("Let's try to printf a simple sentence.\n");
+    _printf("H\tH");
+    printf("H\tH");
+    _printf("Character:[%c]\n", 'H');
+    printf("Character:[%c]\n", 'H');
+    _printf("String:[%    s]\n", "I am a string !");
+    printf("String:[%     s]\n", "I am a string !");
+    _printf("Percent:[%%]\n");
+    printf("Percent:[%%]\n");
+    return (0);
 }
