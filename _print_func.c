@@ -25,16 +25,16 @@ char *print_s(va_list list)
 	return (s);
 }
 
-//char *print_i(va_list list, char *create_buffer)
-//{
-//	int i;
-//	i = va_arg(list, int);
-//	return (i);
-//}
+char *print_i(va_list list, char *create_buffer)
+ {
+ 	int i;
+ 	i = va_arg(list, int);
+ 	return (i);
+}
 
-//char *print_d(va_list list)
-//{
-//	int i;
-//	i = va_arg(list, int);
-//	return (i);
-//}
+char *print_d(va_list list)
+{
+	int i;
+	i = va_arg(list, int);
+	return (i);
+	}

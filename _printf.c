@@ -5,8 +5,9 @@
 #include <string.h>
 #include "holberton.h"
 /**
- *
- *
+ * _printf - printf function
+ * @format: const char pointer
+ * Return: b_len
  */
 int _printf(const char *format, ...)
 {
@@ -20,8 +21,8 @@ int _printf(const char *format, ...)
 	flags flags_t[] = {
 		{"c", print_c},
 		{"s", print_s},
-		//{"i", print_i},
-		//{"d", print_d},
+		{"i", print_i},
+		{"d", print_d},
 		{NULL, NULL}
 	};
 
@@ -31,7 +32,7 @@ int _printf(const char *format, ...)
 		return (0);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == '%' && format [i + 1] == '%')
+		if (format[i] == '%' && format[i + 1] == '%')
 			continue;
 		else if (format[i] == '%')
 		{
