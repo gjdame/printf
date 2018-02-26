@@ -21,8 +21,8 @@ int _printf(const char *format, ...)
 	flags flags_t[] = {
 		{"c", print_c},
 		{"s", print_s},
-		{"i", print_i},
-		{"d", print_d},
+		/*{"i", print_i},
+		  {"d", print_d},*/
 		{NULL, NULL}
 	};
 
