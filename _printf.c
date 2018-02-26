@@ -21,8 +21,8 @@ int _printf(const char *format, ...)
 	flags flags_t[] = {
 		{"c", print_c},
 		{"s", print_s},
-		/*{"i", print_i},
-		  {"d", print_d},*/
+		{"i", print_i},
+		{"d", print_i},
 		{NULL, NULL}
 	};
 
@@ -64,5 +64,6 @@ int _printf(const char *format, ...)
 	}
 	write(1, create_buff, b_len);
 	va_end(list);
+	free(create_buff);
 	return (b_len);
 }
