@@ -64,6 +64,5 @@ int _printf(const char *format, ...)
 	}
 	write(1, create_buff, b_len);
 	va_end(list);
-	free(create_buff);
 	return (b_len);
 }
