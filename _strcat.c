@@ -8,16 +8,14 @@
  *
  * Return: char pointer
  */
-char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src, int n)
 {
-	int len_dest;
 	int i;
 
-	len_dest = _strlen(dest);
 	i = 0;
 	while (src[i] != '\0')
 	{
-		dest[len_dest + i] = src[i];
+		dest[n + i] = src[i];		
 		i++;
 	}
 	return (dest);

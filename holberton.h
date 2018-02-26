@@ -15,7 +15,7 @@ char *(*f)(va_list list);
 typedef struct print_flags flags;
 int _printf(const char *format, ...);
 int _strlen(char *s);
-char *_strcat(char *dest, char *src);
+char *_strcat(char *dest, char *src, int n);
 char *print_c(va_list list);
 char *print_s(va_list list);
 char *print_i(va_list list);

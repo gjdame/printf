@@ -7,8 +7,12 @@
  * Return: Always 0
  */
 int main(void)
-{ 
- _printf("Let's try to printf a simple sentence.\n");
- printf("Let's try to printf a simple sentence.\n");
+{
+	char s;
+	s = 'W';
+	char *c;
+	c = "World";
+		_printf("Hello %c %s\n", s, c);
+	printf("Hello %c %s\n", s, c);
      return (0);
 }

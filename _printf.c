@@ -11,7 +11,6 @@
 int _printf(const char *format, ...)
 {
 	char create_buff[1024];
-	char *buff = create_buff;
 	int i;
 	int j;
 	int b_len = 0;
@@ -28,7 +27,7 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
-	for (i = 0; format[i] != '\0'; i++, b_len++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
@@ -37,17 +36,20 @@ int _printf(const char *format, ...)
 				if (format[i + 1] == *(flags_t[j].c))
 				{
 				    s = flags_t[j].f(list);
-				    _strcat(buff, s);
-				    b_len +=  _strlen(s);
-				    i = i + 2;
+				    _strlen(s);
+				    _strcat(create_buff , s, b_len);
+				    b_len += _strlen(s);
+				    i++;
 				}
 			}
 		}
 		else
+		{
 			create_buff[b_len] = format[i];
+			b_len++;
+		}
 	}
-	create_buff[b_len] = '\0';
-	write(1, &create_buff, _strlen(create_buff));
+	write(1, create_buff, b_len);
 	va_end(list);
 	return(0);
 }

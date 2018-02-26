@@ -5,21 +5,23 @@
  *
  *
  */
-char *print_c (va_list list)
+char *print_c(va_list list)
 {
-	char *s;
-	s = va_arg(list, char *);
+	static char s[2] = {0,'\0'};
+	
+	s[0] = va_arg(list, int);
 	return (s);
 }
 
 char *print_s(va_list list)
 {
 	char *s;
+	
 	s = va_arg(list, char *);
 	return (s);
 }
 
-//char *print_i(va_list list)
+//char *print_i(va_list list, char *create_buffer)
 //{
 //	int i;
 //	i = va_arg(list, int);
