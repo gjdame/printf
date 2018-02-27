@@ -20,7 +20,6 @@ char *print_oct(va_list list)
 		num_cp /= 8;
 		len++;
 	}
-
 	output = malloc(sizeof(char) * len + 1);
 
 	if (output == NULL)
@@ -36,7 +35,6 @@ char *print_oct(va_list list)
 		i++;
 		len--;
 	}
-
 	rev_string(output);
 	output[i] = '\0';
 
