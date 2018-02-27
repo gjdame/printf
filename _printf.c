@@ -73,8 +73,9 @@ int _printf(const char *format, ...)
 			b_len++;
 		}
 	}
+	create_buff[b_len] = '\0';
 	write(1, create_buff, b_len);
 	va_end(list);
-	free (create_buff);
+	free(create_buff);
 	return (b_len);
 }
