@@ -4,35 +4,21 @@
 #include "holberton.h"
 #include <stdlib.h>
 
-int _numlength(int n)
-{
-	int len = 0;
-
-	while (n / 10 != 0)
-	{
-		len++;
-		n /= 10;
-	}
-	return (len);
-}
-
 char *print_u(va_list list)
 {
 	int digit = 0, i = 0;
 	int divisor = 1000000000;
 	char *output;
-	/*char *char_output;*/
 	unsigned int num = va_arg(list, unsigned int);
-	int len = _numlength(num);
+	int len = _numlen(num);
 
-	output = malloc(len * sizeof(char));
-	/*char_size = malloc(sizeof(char) * len);*/
+	output = malloc(len * sizeof(char) + 1);
+
 	if (output == NULL)
 	{
 		free(output);
 		return (0);
 	}
-
 
 	if (num < 10)
 	{
@@ -43,12 +29,14 @@ char *print_u(va_list list)
 	while (divisor)
 	{
 		digit = (num/divisor) % 10;
-		if (digit != 0)
+		if (digit != 0 || (len >= 0 && output[i - 1] >= '0'))
 		{
 			output[i] = digit + '0';
 			i++;
+			len--;
 		}
 		divisor /= 10;
 	}
+	output[i] = '\0';
 	return (output);
 }

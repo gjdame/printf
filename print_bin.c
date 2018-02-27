@@ -14,8 +14,7 @@ char *print_bin(va_list list)
 
 	if (n == 0)
 	{
-		s[i] = '0';
-		i++;
+		s[++i] = '0';
 	}
 
 	while (n != 0)

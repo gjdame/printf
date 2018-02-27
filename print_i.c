@@ -50,7 +50,7 @@ char *print_i(va_list list)
 		{
 			digit = _abs(digit);
 		}
-		if (digit != 0 || (output[i - 1] <= '9' && output[i - 1] > '0'))
+		if (digit != 0 || (len >= 0  && output[i - 1] >= '0'))
 		{
 			output[i] = digit + '0';
 			i++;
