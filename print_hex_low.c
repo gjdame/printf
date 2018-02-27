@@ -21,6 +21,13 @@ char *print_hex_low(va_list list)
 		return (0);
 	}
 
+	if (num == 0)
+	{
+		output[0] = '0';
+		output[1] = '\0';
+		return (output);
+		}
+
 	while (num != 0)
 	{
 		tmp = 0;
@@ -39,7 +46,8 @@ char *print_hex_low(va_list list)
 
 		num = num / 16;
 	}
-
+	
+	rev_string(output);
 	output[i] = '\0';
 
 	return (output);
