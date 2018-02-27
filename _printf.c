@@ -16,13 +16,14 @@ int _printf(const char *format, ...)
 	int j;
 	int b_len = 0;
 	char *s;
-	va_list list;	
+	va_list list;
 	flags flags_t[] = {
 		{"c", print_c},
 		{"s", print_s},
 		{"i", print_i},
 		{"d", print_i},
 		{"u", print_u},
+		{"b", print_bin},
 		{NULL, NULL}
 	};
 

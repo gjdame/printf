@@ -1,28 +1,23 @@
 #include "holberton.h"
+#include <stdio.h>
+#include <stdarg.h>
 
 char *print_bin(va_list list)
 {
-	unsigned int b_num[64];
-	char *b_str;
-	int i = 0;
-	int num = va_arg(list, unsigned int);
+	unsigned int n = va_arg(list, unsigned int);
+	char s[1024];
+	char *b;
+	int i;
 
-	if (num == 0)
+	b = s;
+	i = 0;
+	while (n != 0)
 	{
-		b_num[i] = 0;
-		b_str = _itoa(b_num);
-		return (b_str);
+	s[i] = (n % 2) + '0';
+	i++;
+	n = n / 2;
 	}
+	rev_string(s);
 
-	while (num > 0)
-	{
-		b_num[i] = num % 2;
-		num /= 2;
-		i++;
-	}
-
-	for (j = (i - 1); j < 64; j++)
-		b_num[j] = 0;
-	b_str = _itoa(b_num); /*convert num to string*/
-	return (b_str);
+	return (b);
 }
