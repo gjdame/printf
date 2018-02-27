@@ -11,13 +11,12 @@
  */
 int _printf(const char *format, ...)
 {
-	char create_buff[1024];
+	char *create_buff;
 	int i;
 	int j;
 	int b_len = 0;
 	char *s;
-	va_list list;
-
+	va_list list;	
 	flags flags_t[] = {
 		{"c", print_c},
 		{"s", print_s},
@@ -26,9 +25,16 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 
+	create_buff = malloc(1024 * sizeof(char));
+	if (create_buff == NULL)
+	{
+		free(create_buff);
+		return (-1);
+	}
+
 	va_start(list, format);
 
-	if (format == NULL)
+	if (format == NULL || list == NULL)
 		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
@@ -43,6 +49,8 @@ int _printf(const char *format, ...)
 				if (format[i + 1] == *(flags_t[j].c))
 				{
 					s = flags_t[j].f(list);
+					if (s == NULL)
+						return (0);
 					_strlen(s);
 					_strcat(create_buff, s, b_len);
 					b_len += _strlen(s);
@@ -64,5 +72,6 @@ int _printf(const char *format, ...)
 	}
 	write(1, create_buff, b_len);
 	va_end(list);
+	free (create_buff);
 	return (b_len);
 }

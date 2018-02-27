@@ -27,12 +27,17 @@ char *print_i(va_list list)
 	int digit = 0, i = 0;
 	int divisor = 1000000000;
 	char *output;
-	/* char *char_output;*/
+	/*char *char_output;*/
 	int num = va_arg(list, int);
 	int len = _numlen(num);
 
-	output = malloc(len * sizeof(int));
-	/* char_size = malloc(sizeof(char) * len);*/
+	output = malloc(len * sizeof(char));
+	/*char_size = malloc(sizeof(char) * len);*/
+	if (output == NULL)
+	{
+		free(output);
+		return (0);
+	}
 
 	if (num < 0)
 	{
