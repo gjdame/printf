@@ -15,15 +15,18 @@ char *print_bin(va_list list)
 	if (n == 0)
 	{
 		s[i] = '0';
+		i++;
 	}
 
 	while (n != 0)
 	{
 		s[i] = (n % 2) + '0';
 		i++;
-		n = n / 2;
+		n /= 2;
 	}
+
 	rev_string(s);
+	s[i] = '\0';
 
 	return (b);
 }
