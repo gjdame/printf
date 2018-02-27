@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 		{"d", print_i},
 		{"u", print_u},
 		{"b", print_bin},
+		{"o", print_oct},
 		{NULL, NULL}
 	};
 
