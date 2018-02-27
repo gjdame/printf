@@ -17,7 +17,7 @@ char *print_oct(va_list list)
 	if (output == NULL)
 	{
 		free(output);
-		return (NULL);
+		return (0);
 	}
 
 	while (len >= 0)
