@@ -1,1 +1,33 @@
-hello
+.SH NAME
+.SH ""
+
+.B _printf
+- a cruddier version of printf.
+
+.SH SYNOPSIS
+.SH ""
+
+_printf() the function produces output according to format string that \
+specifies how subsequent arguments are written and converted to stdout, the \
+standard output stream.
+
+_printf() will loop through the format for a conversion specifier (%). If found\
+, it will access an array of structures and match the corresponding character \
+with the given function. The specified function will return a string-converted \
+version of the result and immediately passed into the buffer.
+
+.SS Return Value
+
+Upon success, these main function will return the number of characters printed.
+
+.SH "SEE ALSO"
+.SH ""
+
+.BR printf(1)
+
+.P
+
+.SH "AUTHOR"
+.SH ""
+
+Amy Tai and Greg Dame
