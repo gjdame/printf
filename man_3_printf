@@ -1,3 +1,7 @@
+.\" _printf man page /usr/share/man/man3/printf.3
+.\"
+.TH _PRINTF 3 "27 February 2018" "0.1" "Holberton _printf"
+
 .SH NAME
 .SH ""
 
@@ -5,6 +9,9 @@
 - a cruddier version of printf.
 
 .SH SYNOPSIS
+.SH ""
+
+.SH DESCRIPTION
 .SH ""
 
 _printf() the function produces output according to format string that \
@@ -16,8 +23,15 @@ _printf() will loop through the format for a conversion specifier (%). If found\
 with the given function. The specified function will return a string-converted \
 version of the result and immediately passed into the buffer.
 
-.SS Return Value
+.SS Example
+.RS
 
+_printf("They call me mad, but one day when history of France is written, they \
+will mark my name well ...%s ", "Sidney Applebaum")
+
+.RE
+
+.SS Return Value
 Upon success, these main function will return the number of characters printed.
 
 .SH "SEE ALSO"
@@ -27,7 +41,9 @@ Upon success, these main function will return the number of characters printed.
 
 .P
 
+.SH BUGS
+Bound to be a bit bugger.
+
 .SH "AUTHOR"
 .SH ""
-
 Amy Tai and Greg Dame
