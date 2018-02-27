@@ -1,6 +1,8 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 #include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * struct print_flags - Struct
  *
@@ -26,4 +28,6 @@ void *rev_string(char *s);
 char *print_bin(va_list list);
 int return_position(const char *s, int n);
 int _numlen(int n);
+char *_itoa(int n);
+char *print_bin(va_list list);
 #endif
