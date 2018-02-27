@@ -12,13 +12,18 @@ int _abs(int n)
 
 char *print_i(va_list list)
 {
-	int digit = 0, i = 0;
+	int digit = 0, i = 0, neg = 0;
 	int divisor = 1000000000;
 	char *output;
 	int num = va_arg(list, int);
 	int len = _numlen(num);
 
-	output = malloc(len * sizeof(char) + 1);
+	if (num < 0)
+	{
+		neg++;
+	}
+
+	output = malloc(len * sizeof(char) + 1 + neg);
 
 	if (output == NULL)
 	{
@@ -45,10 +50,11 @@ char *print_i(va_list list)
 		{
 			digit = _abs(digit);
 		}
-		if (digit != 0)
+		if (digit != 0 || (output[i - 1] <= '9' && output[i - 1] > '0'))
 		{
 			output[i] = digit + '0';
 			i++;
+			len--;
 		}
 		divisor /= 10;
 	}
