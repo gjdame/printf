@@ -1,15 +1,16 @@
 #include "holberton.h"
 /**
- * print_oct - print octal from decimal
+ * print_hex - print hexadecimal from decimal
  * @list: list
  * Return: pointer to string
  */
 
-char *print_oct(va_list list)
+char *print_hex(va_list list)
 {
 	unsigned int num = va_arg(list, unsigned int);
 	char *output;
 	int i = 0;
+	int tmp;
 	int len = _numlen(num);
 
 	output = malloc(sizeof(char) * len + 1);
@@ -20,15 +21,24 @@ char *print_oct(va_list list)
 		return (0);
 	}
 
-	while (len >= 0)
+	while (num != 0)
 	{
-		output[i] = ((num % 8) + '0');
-		num /= 8;
-		i++;
-		len--;
-	}
+		tmp = 0;
+		tmp = num % 16;
 
-	rev_string(output);
+		if(tmp < 10)
+		{
+			output[i] = tmp + 48;
+			i++;
+		}
+		else
+		{
+			output[i] = tmp + 55;
+			i++;
+		}
+
+		num = num / 16;
+	}
 
 	output[i] = '\0';
 
