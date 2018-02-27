@@ -13,9 +13,9 @@ char *print_bin(va_list list)
 	i = 0;
 	while (n != 0)
 	{
-	s[i] = (n % 2) + '0';
-	i++;
-	n = n / 2;
+		s[i] = (n % 2) + '0';
+		i++;
+		n = n / 2;
 	}
 	rev_string(s);
 
