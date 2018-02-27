@@ -52,7 +52,7 @@ int _printf(const char *format, ...)
 				{
 					s = flags_t[j].f(list);
 					if (s == NULL)
-						return (0);
+						return (-1);
 					_strlen(s);
 					_strcat(create_buff, s, b_len);
 					b_len += _strlen(s);
