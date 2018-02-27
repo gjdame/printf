@@ -10,19 +10,16 @@ int _abs(int n)
 	return (n);
 }
 
-
-
 char *print_i(va_list list)
 {
 	int digit = 0, i = 0;
 	int divisor = 1000000000;
 	char *output;
-	/*char *char_output;*/
 	int num = va_arg(list, int);
 	int len = _numlen(num);
 
-	output = malloc(len * sizeof(char));
-	/*char_size = malloc(sizeof(char) * len);*/
+	output = malloc(len * sizeof(char) + 1);
+
 	if (output == NULL)
 	{
 		free(output);
@@ -55,5 +52,6 @@ char *print_i(va_list list)
 		}
 		divisor /= 10;
 	}
+	output[i] = '\0';
 	return (output);
 }
