@@ -9,13 +9,12 @@ char *print_oct(va_list list)
 {
 	char *output;
 	int i = 0;
-	int num_cp;
+	unsigned int num_cp;
 	int len;
-	unsigned int num = va_arg(list, unsigned int);
+	unsigned int num =  va_arg(list, unsigned int);
 
 	len = 0;
 	num_cp = num;
-
 	while (num_cp > 0)
 	{
 		num_cp /= 8;
@@ -28,7 +27,8 @@ char *print_oct(va_list list)
 		free(output);
 		return (NULL);
 	}
-	while (len - 1>= 0)
+
+	while (len >= 0)
 	{
 		output[i] = ((num % 8) + '0');
 		num /= 8;
