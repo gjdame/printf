@@ -11,6 +11,12 @@ char *print_bin(va_list list)
 
 	b = s;
 	i = 0;
+
+	if (n == 0)
+	{
+		s[i] = '0';
+	}
+
 	while (n != 0)
 	{
 		s[i] = (n % 2) + '0';
