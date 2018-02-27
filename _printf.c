@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 		{"s", print_s},
 		{"i", print_i},
 		{"d", print_i},
+		{"u", print_u},
 		{NULL, NULL}
 	};
 
