@@ -8,6 +8,8 @@
  */
 void *rev_string(char *s)
 {
+	if (s == NULL)
+		return (0);
 	char b;
 	int y, x, a;
 

@@ -22,8 +22,8 @@ int main(void)
     printf("Length:[%d, %i]\n", len2, len2);
     _printf("Negative:[%b]\n", 98);
     printf("Negative:[%b]\n", 98);
-    _printf("Unsigned:[%u]\n", ui);
-    printf("Unsigned:[%u]\n", ui);
+    _printf("Unsigned:[%]\n");
+    printf("Unsigned:[%    ]\n");
     _printf("Unsigned octal:[%o]\n", ui);
     printf("Unsigned octal:[%o]\n", ui);
     _printf("Unsigned hexadecimal:[%x, %X]\n", 0, 0);

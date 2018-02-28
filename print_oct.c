@@ -7,26 +7,22 @@
 
 char *print_oct(va_list list)
 {
-	char *output;
+	unsigned int num = va_arg(list, unsigned int);
+	char output[1024];
+	char *out_ptr;
 	int i = 0;
 	int len;
 	unsigned int num_cp = 0;
 	unsigned int num =  va_arg(list, unsigned int);
 	len = 0;
+  
+  out_ptr = output;
 
 	num_cp = num;
 	while (num_cp > 0)
 	{
 		num_cp /= 8;
 		len++;
-	}
-
-	output = malloc(sizeof(char) * len + 1);
-
-	if (output == NULL)
-	{
-		free(output);
-		return (NULL);
 	}
 
 	if (num == 0)
@@ -46,5 +42,5 @@ char *print_oct(va_list list)
 	rev_string(output);
 	output[i] = '\0';
 
-	return (output);
+	return (out_ptr);
 }
