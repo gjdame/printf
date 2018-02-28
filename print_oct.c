@@ -7,16 +7,15 @@
 
 char *print_oct(va_list list)
 {
-	unsigned int num = va_arg(list, unsigned int);
 	char output[1024];
 	char *out_ptr;
 	int i = 0;
 	int len;
 	unsigned int num_cp = 0;
-	unsigned int num =  va_arg(list, unsigned int);
+	unsigned int num = va_arg(list, unsigned int);
+
+	out_ptr = output;
 	len = 0;
-  
-  out_ptr = output;
 
 	num_cp = num;
 	while (num_cp > 0)
@@ -25,10 +24,11 @@ char *print_oct(va_list list)
 		len++;
 	}
 
+	printf("%d\n", len);
 	if (num == 0)
 	{
 		output[i] = '\0';
-		return (output);
+		return (out_ptr);
 	}
 
 	while (len > 0)
