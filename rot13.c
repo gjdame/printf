@@ -15,6 +15,9 @@ char *rot13(va_list list)
 	char *s = va_arg(list, char *);
 	char *s_cpy;
 
+	if (s == NULL)
+		return (NULL);
+
 	s_cpy = malloc(sizeof(char) * (_strlen(s) + 1));
 
 	if (s_cpy == NULL)
