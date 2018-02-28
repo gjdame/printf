@@ -3,16 +3,14 @@
 .TH _PRINTF 3 "27 February 2018" "0.1" "Holberton _printf"
 
 .SH NAME
-.SH ""
+_printf
 
-.B _printf
-- a cruddier version of printf.
+.B_printf - format and print data. Part of a project at Holberton School.
 
 .SH SYNOPSIS
-.SH ""
+Part of a project at holberton school, this project mimics the printf function \found in in C. 
 
 .SH DESCRIPTION
-.SH ""
 
 _printf() the function produces output according to format string that \
 specifies how subsequent arguments are written and converted to stdout, the \
@@ -23,8 +21,33 @@ _printf() will loop through the format for a conversion specifier (%). If found\
 with the given function. The specified function will return a string-converted \
 version of the result and immediately passed into the buffer.
 
+.SH CONVERSION SPECIFIERS
+
+.IP %s
+prints a string.
+.IP %c
+prints a character.
+.IP %d
+prints an integer. Same as %i.
+.IP %i
+See %d.
+.IP %u
+Prints unsigned int.
+.IP %o
+Converts unsigned int to octal.
+.IP %x
+Converts unsigned int to hexadecimal (lowercase)
+.IP %X
+Converts unsigned int to hexadecimal (uppercase)
+.IP %r
+Prints reverse of intput string
+.IP %R
+Converts string to rot13
+
 .SS Example
 .RS
+_printf("Hello %s", "world");
+Prints string "Hello world"
 
 _printf("They call me mad, but one day when history of France is written, they \
 will mark my name well ...%s ", "Sidney Applebaum")
@@ -42,8 +65,7 @@ Upon success, these main function will return the number of characters printed.
 .P
 
 .SH BUGS
-Bound to be a bit bugger.
+Memory issues are known to frequent this function. User beware.
 
 .SH "AUTHOR"
-.SH ""
 Amy Tai and Greg Dame
