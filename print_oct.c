@@ -7,7 +7,7 @@
 
 char *print_oct(va_list list)
 {
-	char *output
+	char *output;
 	int i = 0;
 	int len;
 	unsigned int num_cp = 0;

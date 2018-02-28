@@ -34,8 +34,8 @@ int main(void)
     printf("String:[%d]\n", 15);
     _printf("Address:[%p]\n", addr);
     printf("Address:[%p]\n", addr);
-    _printf("Len:[%d]\n", len);
-    printf("Len:[%d]\n", len2);
+    _printf("Len:[%r\n", "string");
+    printf("Len:[%r]\n", len2);
     _printf("hello %R\n", "string");
     return (0);
 }

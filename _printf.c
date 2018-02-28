@@ -25,8 +25,10 @@ int _printf(const char *format, ...)
 		{"u", print_u},
 		{"b", print_bin},
 		{"o", print_oct},
+		{"r", print_r},
 		{"X", print_hex},
 		{"x", print_hex_low},
+		{"R", rot13},
 		{NULL, NULL}
 	};
 
