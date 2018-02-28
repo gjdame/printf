@@ -42,6 +42,7 @@ char *print_oct(va_list list)
 		i++;
 		len--;
 	}
+
 	rev_string(output);
 	output[i] = '\0';
 
