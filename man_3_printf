@@ -8,7 +8,11 @@ _printf
 .B_printf - format and print data. Part of a project at Holberton School.
 
 .SH SYNOPSIS
-Part of a project at holberton school, this project mimics the printf function \found in in C. 
+Part of a project at holberton school.
+This project mimics the printf found in in C.
+
+_printf FORMAT [ARGUMENT]...
+.ss
 
 .SH DESCRIPTION
 
@@ -43,6 +47,19 @@ Converts unsigned int to hexadecimal (uppercase)
 Prints reverse of intput string
 .IP %R
 Converts string to rot13
+
+.SH OPTIONS
+
+Pending
+
+.SH FORMAT
+controls the output as in C printf.  Interpreted sequences are:
+
+       \n     new line
+
+       \t     tab
+
+       %%     a single %
 
 .SS Example
 .RS
