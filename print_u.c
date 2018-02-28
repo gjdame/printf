@@ -3,7 +3,12 @@
 #include <stdarg.h>
 #include "holberton.h"
 #include <stdlib.h>
-
+/**
+ * print_u - print unsigned int
+ * @list: va_list
+ * Return: string
+ *
+ */
 char *print_u(va_list list)
 {
 	int digit = 0, i = 0;
@@ -28,7 +33,7 @@ char *print_u(va_list list)
 
 	while (divisor)
 	{
-		digit = (num/divisor) % 10;
+		digit = (num / divisor) % 10;
 		if (digit != 0 || (len >= 0 && output[i - 1] >= '0'))
 		{
 			output[i] = digit + '0';

@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
-
+/**
+ * rev_string - reverse string
+ * @s: string
+ * Return: s
+ */
 void *rev_string(char *s)
 {
 	char b;

@@ -30,8 +30,8 @@ int main(void)
     printf("Unsigned hexadecimal:[%x, %X]\n", 0, 0);
     _printf("Character:[%c]\n", 'H');
     printf("Character:[%c]\n", 'H');
-    _printf("String:[%s]\n", "I am a string !");
-    printf("String:[%s]\n", "I am a string !");
+    _printf("String:[%s]\n", "I am a string gcc -Wall -Wextra -Werror -pedantic -Wno-format *.cgcc -Wall -Wextra -Werror -pedantic -Wno-format *.cgcc -Wall -Wextra -Werror11111111111111111111111111111111111111111111111111111111111111111111111111111111111111-pedantic -Wno-format *.cgcc #########################################################################################################################################################################################");
+    printf("String:[%d]\n", 15);
     _printf("Address:[%p]\n", addr);
     printf("Address:[%p]\n", addr);
     _printf("Len:[%d]\n", len);

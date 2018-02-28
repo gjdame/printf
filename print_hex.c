@@ -33,7 +33,7 @@ char *print_hex(va_list list)
 		tmp = 0;
 		tmp = num % 16;
 
-		if(tmp < 10)
+		if (tmp < 10)
 		{
 			output[i] = tmp + 48;
 			i++;

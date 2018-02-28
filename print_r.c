@@ -2,8 +2,10 @@
 #include <stdarg.h>
 #include "holberton.h"
 /**
+ * print_r - print reverse
+ * @list: va_list
  *
- *
+ * Return: string
  */
 char *print_r(va_list list)
 {

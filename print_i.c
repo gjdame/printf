@@ -2,14 +2,22 @@
 #include <stdarg.h>
 #include "holberton.h"
 #include <stdlib.h>
-
+/**
+ * _abs - absolute value
+ * @n: int
+ * Return: n
+ */
 int _abs(int n)
 {
 	if (n < 0)
 		n *= -1;
 	return (n);
 }
-
+/**
+ * print_i - print integer
+ * @list: va_list
+ * Return: string
+ */
 char *print_i(va_list list)
 {
 	int digit = 0, i = 0, neg = 0;
@@ -45,7 +53,7 @@ char *print_i(va_list list)
 
 	while (divisor)
 	{
-		digit = (num/divisor) % 10;
+		digit = (num / divisor) % 10;
 		if (num < 0)
 		{
 			digit = _abs(digit);
