@@ -1,9 +1,11 @@
 #include "holberton.h"
+
 /**
- * rot13 = convert string to rot13
+ * rot13 - convert string to rot13
  * @list: argument passed
  * Return: pointer to rot13 string
  */
+
 char *rot13(va_list list)
 {
 	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -12,6 +14,9 @@ char *rot13(va_list list)
 	int count = 0;
 	char *s = va_arg(list, char *);
 	char *s_cpy;
+
+	if (s == NULL)
+		return (NULL);
 
 	s_cpy = malloc(sizeof(char) * (_strlen(s) + 1));
 
