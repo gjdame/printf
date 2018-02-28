@@ -27,6 +27,7 @@ char *print_u(va_list list);
 char *print_oct(va_list list);
 char *print_hex(va_list list);
 char *print_hex_low(va_list list);
+char *print_r(va_list list);
 void *rev_string(char *s);
 char *print_bin(va_list list);
 int return_position(const char *s, int n);

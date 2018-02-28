@@ -1,7 +1,11 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdarg.h>
-
+/**
+ * print_bin - print binary
+ * @list: va_list
+ * Return: pointer to string of binary
+ */
 char *print_bin(va_list list)
 {
 	unsigned int n = va_arg(list, unsigned int);

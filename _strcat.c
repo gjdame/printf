@@ -1,9 +1,10 @@
 #include "holberton.h"
+#include <unistd.h>
 /**
  * _strcat - concatenates two strings
  * @dest: char pointer
  * @src: char pointer
- *
+ * @n: int
  * _strncat: concatenates two strings
  *
  * Return: char pointer

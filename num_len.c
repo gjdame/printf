@@ -2,8 +2,9 @@
 #include <limits.h>
 #include "holberton.h"
 /**
- *
- *
+ * _numlen - length of number
+ * @n: int
+ * Return: length
  */
 int _numlen(int n)
 {
