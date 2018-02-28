@@ -13,16 +13,22 @@ char *print_u(va_list list)
 {
 	int digit = 0, i = 0;
 	int divisor = 1000000000;
-	char output[1024];
-	char *out_ptr;
+	char *output;
 	unsigned int num = va_arg(list, unsigned int);
 	int len = _numlen(num);
 
-	out_ptr = output;
+	output = malloc(sizeof(char) * len + 1);
+
+	if (output == NULL)
+	{
+		free(output);
+		return (0);
+	}
+
 	if (num < 10)
 	{
 		output[i] = num + '0';
-		return (out_ptr);
+		return (output);
 	}
 
 	while (divisor)
@@ -37,5 +43,5 @@ char *print_u(va_list list)
 		divisor /= 10;
 	}
 	output[i] = '\0';
-	return (out_ptr);
+	return (output);
 }

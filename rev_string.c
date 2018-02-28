@@ -11,7 +11,7 @@ void *rev_string(char *s)
 	char b;
 	int y, x, a;
 
-       	if (s == NULL)
+	if (s == NULL)
 		return (0);
 
 	y = _strlen(s);

@@ -8,17 +8,24 @@
 char *print_hex(va_list list)
 {
 	unsigned int num = va_arg(list, unsigned int);
-	char output[1024];
-	char *out_ptr;
+	char *output;
 	int i = 0;
 	int tmp;
+	int len = _numlen(num);
 
-	out_ptr = output;
+	output = malloc(sizeof(char) * len + 1);
+
+	if (output == NULL)
+	{
+		free(output);
+		return (0);
+	}
+
 	if (num == 0)
 	{
 		output[0] = '0';
 		output[1] = '\0';
-		return (out_ptr);
+		return (output);
 	}
 
 	while (num != 0)
@@ -43,5 +50,5 @@ char *print_hex(va_list list)
 	rev_string(output);
 	output[i] = '\0';
 
-	return (out_ptr);
+	return (output);
 }
