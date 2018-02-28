@@ -32,11 +32,12 @@ char *print_r(va_list list)
 		a++;
 	}
 
-	for (a = 0; a < x ; a++)
+	for (a = 0; a < x; a++)
 	{
 		b = w[a];
 		w[a] = w[y - 1 - a];
 		w[y - 1 - a] = b;
 	}
+	w[y] = '\0';
 	return (z);
 }
