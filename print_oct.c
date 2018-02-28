@@ -24,7 +24,6 @@ char *print_oct(va_list list)
 		len++;
 	}
 
-	printf("%d\n", len);
 	if (num == 0)
 	{
 		output[i] = '\0';
