@@ -8,10 +8,11 @@
  */
 void *rev_string(char *s)
 {
-	if (s == NULL)
-		return (0);
 	char b;
 	int y, x, a;
+
+       	if (s == NULL)
+		return (0);
 
 	y = _strlen(s);
 	x = _strlen(s) / 2;
