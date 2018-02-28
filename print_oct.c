@@ -8,17 +8,12 @@
 char *print_oct(va_list list)
 {
 	unsigned int num = va_arg(list, unsigned int);
-	char *output;
+	char output[1024];
+	char *out_ptr;
 	int i = 0;
 	int len = _numlen(num);
 
-	output = malloc(sizeof(char) * len + 1);
-
-	if (output == NULL)
-	{
-		free(output);
-		return (0);
-	}
+	out_ptr = output;
 
 	while (len >= 0)
 	{
@@ -32,5 +27,5 @@ char *print_oct(va_list list)
 
 	output[i] = '\0';
 
-	return (output);
+	return (out_ptr);
 }
