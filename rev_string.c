@@ -12,7 +12,7 @@ void *rev_string(char *s)
 	int y, x, a;
 
 	if (s == NULL)
-	  return (0);
+		return (0);
 
 	y = _strlen(s);
 	x = _strlen(s) / 2;

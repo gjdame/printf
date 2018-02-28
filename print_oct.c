@@ -36,7 +36,7 @@ char *print_oct(va_list list)
 		return (output);
 	}
 
-	while (len >= 0)
+	while (len > 0)
 	{
 		output[i] = ((num % 8) + '0');
 		num /= 8;
